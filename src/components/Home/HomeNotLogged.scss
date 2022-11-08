@@ -1,0 +1,353 @@
+@import "../../style/mixin.scss";
+@import "../../style/index.scss";
+
+
+.sectionTitle {
+  background-color: var(--turquoiseColor);
+  @include fccc;
+  color: white;
+  padding: 10px 50px;
+  text-align: center;
+  border-top: 5px solid var(--orangeColor);
+
+  p {
+    font-size: 50px;
+    height: auto;
+  }
+}
+
+.sectionBody {
+  background-color: white;
+  padding: 20px 10vw;
+}
+
+// ----------- LANDING PAGE -----------
+.landingPage {
+  background-color: var(--turquoiseColor);
+  @include box(100vw, auto);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+// ----------- NAV -----------
+nav {
+  p,a{
+    color: var(--orangeColor) !important;
+    font-weight: 500;
+    margin-right: 30px;
+  }
+}
+
+// ----------- HEADER -----------
+header {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-color: black;
+  h1 {
+    color: white;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    width: 100%;
+    height: 260px;
+    h1 {
+      font-size: 50px;
+      margin-left: 10px;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  header {
+    height: 45vw;
+    max-height: 550px;
+    // max-width: 1200px;
+
+    h1 {
+      font-size: 10vw;
+      margin-left: 20px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    h1 {
+      font-size: 120px;
+    }
+  }
+}
+
+// ----------- SECTION 1 INTRO -----------
+
+#intro {
+  background-color: black;
+  h2 {
+    background-color: white;
+    height: 200px;
+    padding: 30px 10px;
+    font-size: 20px;
+    font-style: italic;
+    @include fcca;
+    color: var(--turquoiseColor);
+  }
+
+  .quotes {
+    height: 400px;
+    background-color: white;
+    @include frcc;
+
+    .quotesInner {
+      border-radius: 3px;
+      color: #fff;
+      width: 60%;
+      max-width: 600px;
+      height: 80%;
+      transform-style: preserve-3d;
+      transition: 0.4s;
+      text-align: center;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-top: 20px solid var(--orangeColor);
+        border-left: 20px solid var(--orangeColor);
+        box-sizing: border-box;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-bottom: 20px solid var(--orangeColor);
+        border-right: 20px solid var(--orangeColor);
+        box-sizing: border-box;
+      }
+      .fas {
+        font-size: 25px;
+        height: 50px;
+        width: 50px;
+        line-height: 50px !important;
+        background-color: var(--orangeColor);
+        color: var(--turquoiseColor);
+      }
+      .fa2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+      }
+      .text {
+        position: absolute;
+        top: 30px;
+        left: -30px;
+        width: calc(100% + 60px);
+        height: calc(100% - 60px);
+        background-color: var(--turquoiseColor);
+        border-radius: 3px;
+        transition: 0.4s;
+        .fa1 {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        div {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          text-align: center;
+          width: 100%;
+          padding: 30px 60px;
+          line-height: 1.5;
+          box-sizing: border-box;
+          p {
+            font-size: 23px;
+          }
+          @media (min-width: 768px) {
+            p {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // ------- animation ----------
+  .loopdiv {
+    margin: 30px auto;
+    height: 2.6em;
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: black;
+
+    .loop {
+      animation-name: titleflip;
+      animation: titleflip 4s ease-in-out infinite;
+    }
+    ul,
+    li {
+      height: 13.5em;
+      margin: 0px;
+      padding: 0px;
+      width: 100%;
+    }
+    li {
+      margin-bottom: 10px;
+      height: 1em !important;
+      padding: 0px 0 0px 0;
+      font-size: 3em;
+      width: 100%;
+    }
+
+    @keyframes titleflip {
+      0%,
+      10% {
+        transform: translate(0px, -12em);
+      }
+      10%,
+      25% {
+        transform: translate(0px, -12em);
+      }
+      25%,
+      50% {
+        transform: translate(0px, -8.3em);
+      }
+      50%,
+      75% {
+        -webkit-transform: translate(0px, -4.5em);
+      }
+      75%,
+      100% {
+        transform: translate(0px, -1em);
+      }
+      100%,
+      0% {
+        transform: translate(0px, -12em);
+      }
+    }
+  }
+}
+
+.introImg {
+  background-color: white;
+  height: 60vw;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100vw;
+}
+//------------ SECTION 2 WHAT  -------------
+#what {
+  .whatBody {
+    @include center;
+    .whatBodyTitle {
+      border-bottom: 1px solid grey;
+      margin-bottom: 10px;
+      p {
+        font-size: 30px;
+      }
+    }
+    .handImg {
+      height: 300px;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 200px
+    }
+  }
+  .ironHack {
+    @include box(100%, 70px);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60px;
+    margin: 30px 0 10px;
+  }
+  .mern {
+    @include box(100%, 60px);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 250px;
+    margin: 30px 0 10px;
+  }
+}
+//------------- SECTION 3 HOW  ------------
+#how {
+  .howBody {
+    .feature {
+      padding: 20px 10px;
+      @include fcc;
+      text-align: center;
+      // background-color: aqua;
+      .featureImg {
+        @include box(100%, 100px);
+        max-width: 130px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+      .featureTitle {
+        font-size: 25px;
+        color: var(--turquoiseColor);
+      }
+    }
+  }
+}
+
+// --------- SECTION 4 VIDEO ------------
+.videoBody {
+  @include fcca;
+  iframe {
+    border: 3px solid orange;
+    width: 75vw;
+    height: 45vw;
+    margin-top: 10px;
+  }
+}
+
+// --------- SECTION 5 LOGIN ------------
+#login {
+  .credentials{
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    border-radius: 10px;
+    padding: 10px;
+    .copyBtn {
+      font-size: 30px;
+      margin-left: 20px;
+      border-radius: 20px;
+    }
+    .copyBtn:active {
+      background-color: var(--turquoiseColor);
+      color: var(--orangeColor);
+    }
+  }
+
+  .button-80 {
+    background-color: var(--orangeColor);
+    border: 2px solid grey;
+    @include frcc;
+    @include box(150px, 40px);
+  }
+}
+
+// --------- FOOTER ------------
+footer {
+  @include box(100%, 100px);
+  @include frca;
+  .homeIcons {
+    font-size: 50px;
+    color: white;
+  }
+}

@@ -1,0 +1,76 @@
+@import "../../style/mixin.scss";
+@import "../../style/index.scss";
+
+.homeBody {
+  @include box(100%, 100%);
+}
+
+.logOutDiv {
+  height: 80px;
+  display: flex;
+  align-items: center;
+
+  .dropdown-item {
+    background-color: var(--turquoiseColor);
+  }
+  .dropdown-menu {
+    height: 50px;
+    margin-left: 10px !important;
+    background-color: var(--turquoiseColor);
+    border-color: var(--orangeColor);
+    text-align: center;
+  }
+  b {
+    color: var(--orangeColor);
+    background-color: var(--turquoiseColor);
+  }
+}
+
+// Small devices - phone vertical
+@media (max-width: 480px) {
+  .homeBody {
+    @include fccb;
+  }
+  .homeLink {
+    @include box(100%, 30%);
+  }
+  .tableImg {
+    background-position: 60% 70%;
+  }
+  .kitchenImg {
+    background-position: 60% 60%;
+  }
+  .menuImg {
+    background-position: 60% 20%;
+  }
+}
+
+// Medium devices - phone landscape - tablet
+@media (min-width: 481px) {
+  .homeBody {
+    @include frcb;
+  }
+  .homeLink {
+    @include box(32%, 100%);
+  }
+  .tableImg {
+    background-position: 60% 70%;
+  }
+  .kitchenImg {
+    background-position: 70% 70%;
+  }
+  .menuImg {
+    background-position: 50% 20%;
+  }
+}
+@media (min-width: 1000px) {
+  .homeBody {
+    @include frcb;
+    @include box(70%, 70%);
+    @include centerAbs;
+  }
+  .logOutDiv{
+    height: 40px;
+  }
+
+}
