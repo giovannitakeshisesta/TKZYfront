@@ -1,18 +1,16 @@
 @import "../../style/mixin.scss";
 @import "../../style/index.scss";
 
-
 .sectionTitle {
-  background-color: var(--turquoiseColor);
+  background-color: var(--orangeColor);
+  // background-color: var(--turquoiseColor);
   @include fccc;
   color: white;
-  padding: 10px 50px;
   text-align: center;
-  border-top: 5px solid var(--orangeColor);
+  border-top: 2px solid var(--turquoiseColor);
 
   p {
     font-size: 50px;
-    height: auto;
   }
 }
 
@@ -32,7 +30,8 @@
 
 // ----------- NAV -----------
 nav {
-  p,a{
+  p,
+  a {
     color: var(--orangeColor) !important;
     font-weight: 500;
     margin-right: 30px;
@@ -244,13 +243,6 @@ header {
   }
 }
 
-.introImg {
-  background-color: white;
-  height: 60vw;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: 100vw;
-}
 //------------ SECTION 2 WHAT  -------------
 #what {
   .whatBody {
@@ -262,26 +254,22 @@ header {
         font-size: 30px;
       }
     }
+
     .handImg {
-      height: 300px;
-      background-repeat: no-repeat;
-      background-position: 50% 50%;
-      background-size: 200px
+      width: 250px;
     }
-  }
-  .ironHack {
-    @include box(100%, 70px);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 60px;
-    margin: 30px 0 10px;
-  }
-  .mern {
-    @include box(100%, 60px);
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 250px;
-    margin: 30px 0 10px;
+    .colText {
+      margin-top: 20px;
+      @include fcc;
+      .ironHack {
+        width: 60px;
+        margin:  20px 0 5px;
+      }
+      .mern {
+        width: 260px;
+        margin:  20px 0 5px;
+      }
+    }
   }
 }
 //------------- SECTION 3 HOW  ------------
@@ -291,12 +279,10 @@ header {
       padding: 20px 10px;
       @include fcc;
       text-align: center;
-      // background-color: aqua;
+
       .featureImg {
-        @include box(100%, 100px);
+        width: 100%;
         max-width: 130px;
-        background-repeat: no-repeat;
-        background-size: 100%;
       }
       .featureTitle {
         font-size: 25px;
@@ -312,14 +298,16 @@ header {
   iframe {
     border: 3px solid orange;
     width: 75vw;
+    max-width: 800px;
     height: 45vw;
+    max-height: 600px;
     margin-top: 10px;
   }
 }
 
 // --------- SECTION 5 LOGIN ------------
 #login {
-  .credentials{
+  .credentials {
     border: 1px solid rgba(128, 128, 128, 0.253);
     border-radius: 10px;
     padding: 10px;
@@ -346,6 +334,7 @@ header {
 footer {
   @include box(100%, 100px);
   @include frca;
+  background-color: black;
   .homeIcons {
     font-size: 50px;
     color: white;

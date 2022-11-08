@@ -24,7 +24,7 @@ export default function HomeNotLogged() {
       {/*--------------- NAVBAR --------------- */}
       <nav
         className="navbar navbar-dark  navbar-expand-md"
-        style={{ backgroundColor: "black"}}
+        style={{ backgroundColor: "black" }}
       >
         <div className="container-fluid">
           <p className="navbar-brand me-5">TicketEazy</p>
@@ -93,51 +93,41 @@ export default function HomeNotLogged() {
               <li>TICKETEAZY</li>
             </ul>
           </div>
-          <div
-            className="introImg "
-            style={{ backgroundImage: `url(${devices})` }}
-          ></div>
+          <img src={devices} alt="devices mockup" />
         </section>
 
         {/*--------------- SECTION 2 WHAT --------------- */}
         <section id="what">
-          <div className="what">
-            <div className="sectionTitle">
-              <p>What is TicketEazy?</p>
+          <div className="sectionTitle">
+            <p>What is TicketEazy?</p>
+          </div>
+
+          <div className="whatBody sectionBody">
+            <div className="whatBodyTitle">
+              <p>All you need is in your hand!</p>
             </div>
 
-            <div className="whatBody sectionBody">
-              <div className="whatBodyTitle">
-                <p>All you need is in your hand!</p>
-              </div>
+            <div className="row frcc mb-4">
+              <img
+                src={handmockup}
+                alt=""
+                className="handImg col-sm-12 col-md-4"
+              />
 
-              <div className="row frcc mb-4">
-                <div
-                  className="handImg col-sm-12 col-md-4"
-                  style={{ backgroundImage: `url(${handmockup})` }}
-                ></div>
+              <div className=" col-sm-12 col-md-8 colText">
+                <p>
+                  Is a web application designed to help waiters and kitchen
+                  staff take and modify orders quickly and efficiently by
+                  tapping on chosen items on their smartphone device.
+                </p>
+                <img src={ironHack} alt="ironhack logo" className="ironHack" />
+                <p>
+                  TicketEazy is my final project of the Ironhack Web Dev
+                  bootcamp.
+                </p>
+                <img src={mern} alt="mern logos" className="mern" />
 
-                <div className=" col-sm-12 col-md-8 fccc  mt-3">
-                  <p>
-                    Is a web application designed to help waiters and kitchen
-                    staff take and modify orders quickly and efficiently by
-                    tapping on chosen items on their smartphone device.
-                  </p>
-                  <div
-                    className="ironHack"
-                    style={{ backgroundImage: `url(${ironHack})` }}
-                  ></div>
-                  <p>
-                    TicketEazy is my final project of the Ironhack Web Dev
-                    bootcamp.
-                  </p>
-                  <div
-                    className="mern"
-                    style={{ backgroundImage: `url(${mern})` }}
-                  ></div>
-
-                  <p>Is a MERN full stack application.</p>
-                </div>
+                <p>Is a MERN full stack application.</p>
               </div>
             </div>
           </div>
@@ -162,10 +152,7 @@ export default function HomeNotLogged() {
 
             <div className="row">
               <div className="feature col-md-6 col-lg-4">
-                <div
-                  className="featureImg"
-                  style={{ backgroundImage: `url(${menu})` }}
-                ></div>
+                <img src={menu} alt="menu icon" className="featureImg" />
                 <p className="featureTitle">Create a menu</p>
                 <p>
                   Build your digital menu, filling a simple form add all the
@@ -175,10 +162,7 @@ export default function HomeNotLogged() {
               </div>
 
               <div className="feature col-md-6 col-lg-4">
-                <div
-                  className="featureImg"
-                  style={{ backgroundImage: `url(${show})` }}
-                ></div>
+                <img src={show} alt="show icon" className="featureImg" />
                 <p className="featureTitle">Upsell</p>
                 <p>
                   The application gives waiters quick access to the informations
@@ -187,10 +171,11 @@ export default function HomeNotLogged() {
                 </p>
               </div>
               <div className="feature col-md-6 col-lg-4">
-                <div
+                <img
+                  src={allergens}
+                  alt="allergens icon"
                   className="featureImg"
-                  style={{ backgroundImage: `url(${allergens})` }}
-                ></div>
+                />
                 <p className="featureTitle">Allergens</p>
                 <p>
                   Give a fast and detailed answer to the customers filtering the
@@ -199,10 +184,7 @@ export default function HomeNotLogged() {
                 </p>
               </div>
               <div className="feature col-md-6 col-lg-4">
-                <div
-                  className="featureImg"
-                  style={{ backgroundImage: `url(${table})` }}
-                ></div>
+                <img src={table} alt="table icon" className="featureImg" />
                 <p className="featureTitle">Get Orders</p>
                 <p>
                   Easily get orders , adding messages, indicating the flow of
@@ -218,10 +200,7 @@ export default function HomeNotLogged() {
                 </p>
               </div>
               <div className="feature col-md-6 col-lg-4">
-                <div
-                  className="featureImg"
-                  style={{ backgroundImage: `url(${chef})` }}
-                ></div>
+                <img src={chef} alt="chef icon" className="featureImg" />
                 <p className="featureTitle">Kitchen management</p>
                 <p>
                   The kitchen staff can manage the execution and timing of the
@@ -230,10 +209,7 @@ export default function HomeNotLogged() {
                 </p>
               </div>
               <div className="feature col-md-6 col-lg-4">
-                <div
-                  className="featureImg"
-                  style={{ backgroundImage: `url(${bill})` }}
-                ></div>
+                <img src={bill} alt="bill icon" className="featureImg" />
                 <p className="featureTitle">Payment</p>
                 <p>
                   Doesnt matter how many orders the table has done, get a single
@@ -275,19 +251,23 @@ export default function HomeNotLogged() {
             </p>
 
             <div className="row mt3">
-              <div className="col-md-8 credentials" >
-                <p >
+              <div className="col-md-8 credentials">
+                <p>
                   To skip the registration you can use the following
                   credentials:
                 </p>
                 <span className="frc mt-1">
-                  <p><b>Email</b>: userTest@ticketeazy.com</p>
+                  <p>
+                    <b>Email</b>: userTest@ticketeazy.com
+                  </p>
                   <i
                     className="fa-regular fa-copy copyBtn"
                     onClick={() => copyText()}
                   ></i>
                 </span>
-                <p><b>Password</b>: 123123123 </p>
+                <p>
+                  <b>Password</b>: 123123123{" "}
+                </p>
               </div>
 
               <div className="col-md-4 frcc">
