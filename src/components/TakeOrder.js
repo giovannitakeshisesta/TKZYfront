@@ -25,6 +25,7 @@ import {
 
 export default function TakeOrder({
   selectedTable,
+  setSelectedTable,
   orderToEdit,
   holders,
   refreshTablesPage,
@@ -58,7 +59,7 @@ export default function TakeOrder({
     clickSubmitOrder: () => submitOrder(order, navigate),
     clickUpdateOrder: () => updateOrder(orderToEdit, order,navigate),
     clickDeleteOrder: () =>
-      deleteOrder(orderToEdit, holders, refreshTablesPage, showTablesPage)
+      deleteOrder(orderToEdit, holders, refreshTablesPage, showTablesPage,setSelectedTable)
   };
 
   //-----------------------  USE EFFECT ---------------

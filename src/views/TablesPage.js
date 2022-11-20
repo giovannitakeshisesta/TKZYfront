@@ -108,6 +108,7 @@ export default function TablesPage() {
         {showTakeOrder && (
           <TakeOrder 
             selectedTable={selectedTable} 
+            setSelectedTable = {setSelectedTable}
             orderToEdit={orderToEdit} 
             holders={holders}
             refreshTablesPage={refreshTablesPage}

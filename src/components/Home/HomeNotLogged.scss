@@ -37,19 +37,38 @@ nav {
     margin-right: 30px;
   }
 }
-
+@media (min-width: 1200px) {
+  nav {
+    padding: 0 10vw;
+  }
+}
 // ----------- HEADER -----------
 header {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right bottom;
   background-color: black;
-  h1 {
-    color: white;
-    font-weight: 500;
+
+  section {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    height: 100%;
+
+    div {
+      h1 {
+        position: absolute;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 200;
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      z-index: 100;
+    }
   }
 }
 @media (max-width: 480px) {
@@ -67,8 +86,6 @@ header {
   header {
     height: 45vw;
     max-height: 550px;
-    // max-width: 1200px;
-
     h1 {
       font-size: 10vw;
       margin-left: 20px;
@@ -77,6 +94,7 @@ header {
 }
 @media (min-width: 1200px) {
   header {
+    padding: 0 10vw;
     h1 {
       font-size: 120px;
     }
@@ -263,11 +281,11 @@ header {
       @include fcc;
       .ironHack {
         width: 60px;
-        margin:  20px 0 5px;
+        margin: 20px 0 5px;
       }
       .mern {
         width: 260px;
-        margin:  20px 0 5px;
+        margin: 20px 0 5px;
       }
     }
   }

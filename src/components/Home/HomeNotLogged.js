@@ -60,12 +60,17 @@ export default function HomeNotLogged() {
 
       <main>
         {/*--------------- HEADER --------------- */}
-        <header style={{ backgroundImage: `url(${waiter})` }}>
-          <h1>
-            <span>TICKETEAZY</span>
-            <span>MY</span>
-            <span>FRIEND</span>
-          </h1>
+        <header>
+          <section>
+            <div>
+              <h1>
+                <span>TICKETEAZY</span>
+                <span>MY</span>
+                <span>FRIEND</span>
+              </h1>
+            </div>
+            <img src={waiter} alt="waiter" />
+          </section>
         </header>
 
         {/*--------------- SECTION 1 INTRO --------------- */}
@@ -245,12 +250,12 @@ export default function HomeNotLogged() {
           </div>
 
           <div className="sectionBody">
-            <p className=" mb-3">
+            <p className=" mt-3 mb-4">
               The app is deployed on a free platform, so please be patient the
               login will take a while!
             </p>
 
-            <div className="row mt3">
+            <div className="mb-3 row">
               <div className="col-md-8 credentials">
                 <p>
                   To skip the registration you can use the following
@@ -270,7 +275,7 @@ export default function HomeNotLogged() {
                 </p>
               </div>
 
-              <div className="col-md-4 frcc">
+              <div className="col-md-4 frcc mt-3">
                 <NavLink to="/login" className="button-80 ">
                   Login
                 </NavLink>
