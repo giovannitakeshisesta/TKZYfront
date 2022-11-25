@@ -234,7 +234,7 @@ export default function HomeNotLogged() {
           <div className="videoBody sectionBody">
             <p>Check all the functions in the video!!</p>
             <iframe
-              src="https://www.youtube.com/embed/rk6RpebrHws"
+              src="https://www.youtube.com/embed/5C-Co7YGX-k"
               title="YouTube video player"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
